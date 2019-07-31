@@ -29,4 +29,4 @@ def index():
     return render_template('index.html', photo=captured_photo)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
