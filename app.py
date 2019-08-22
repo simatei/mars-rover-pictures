@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for
 import requests
-from io import StringIO
 from random import choice
 from random import randint
 from decouple import config
@@ -11,7 +10,7 @@ app = Flask(__name__)
 
 api_key = config('API_KEY')
 rover_url = config('ROVER_URL')
-sol = randint(1, 1000)
+sol = randint(1, 668)
 
 
 @app.route("/api")
@@ -37,4 +36,4 @@ def people_in_space():
     return render_template('people_in_space.html', data=data)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
