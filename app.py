@@ -35,5 +35,16 @@ def people_in_space():
     data = response.json()
     return render_template('people_in_space.html', data=data)
 
+# View for ISS location
+@app.route('/iss_location')
+def iss_location():
+    response = requests.get('http://api.open-notify.org/iss-now.json')
+    data = response.json()
+    location = data['iss_position']
+    lat = location['latitude'] # Latitude
+    lon = location['longitude'] # Longtitude
+
+    return render_template('iss_location.html', lat=lat, lon=lon)
+
 if __name__ == "__main__":
     app.run(debug=False)
