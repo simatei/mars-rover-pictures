@@ -5,14 +5,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('index')}}"> <span class="fas fa-home"></span> Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('people_in_space')}}">People In Space</a>
+          <a class="nav-link" href="{{ url_for('people_in_space')}}"> <span class="fas fa-users"></span> People In Space</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url_for('iss_location')}}">ISS location</a>
+          <a class="nav-link" href="{{url_for('iss_location')}}"> <span class="fas fa-map-marked-alt"></span> ISS location</a>
         </li>
       </ul>
       </div>
