@@ -46,5 +46,13 @@ def iss_location():
 
     return render_template('iss_location.html', lat=lat, lon=lon)
 
+@app.errorhandler(404)
+def page_not_found(error): # custom 404 error view
+    return render_template('404.html'), 404
+
+@app.errorhandler(500) # custom internal server error view
+def server_error(error):
+    return render_template('500.html'), 404
+
 if __name__ == "__main__":
     app.run(debug=False)
