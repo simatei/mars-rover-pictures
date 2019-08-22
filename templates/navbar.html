@@ -6,13 +6,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('people_in_space')}}">People In Space</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ISS location</a>
+          <a class="nav-link" href="{{url_for('iss_location')}}">ISS location</a>
         </li>
       </ul>
       </div>
