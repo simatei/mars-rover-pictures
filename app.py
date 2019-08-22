@@ -4,6 +4,7 @@ from io import StringIO
 from random import choice
 from random import randint
 from decouple import config
+import json
 
 
 app = Flask(__name__)
@@ -27,6 +28,13 @@ def index():
     captured_photo = get_photo()
 
     return render_template('index.html', photo=captured_photo)
+
+# Number of people in space
+@app.route('/peopleInSpace')
+def people_in_space():
+    response = requests.get('http://api.open-notify.org/astros.json')
+    data = response.json()
+    return render_template('people_in_space.html', data=data)
 
 if __name__ == "__main__":
     app.run(debug=True)
