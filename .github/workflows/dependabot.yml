@@ -4,3 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    allow:
+      - dependency-name: "flask*"
+    ignore:
+      - dependency-name: "flask"
+        versions: ["< 0.12"]
